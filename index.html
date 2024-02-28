@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Section</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #f1f1f1;   
+        font-family: outfit;    
+        height:100vh; 
+    }
+
+    /* ###########################################
+    NAVBAR
+    ##############################################*/
+    .nav{
+        display: flex;
+        background-color: rgb(4, 118, 153);
+        color: white;
+
+        justify-content: space-between;
+        align-items: center;
+        padding:15px 30px;
+    }
+    .nav .logo span{
+        color: #e25876;
+    }
+    .nav ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        gap:25px;
+    }
+    .nav ul li:hover{
+        color: #f13b3b;
+        /* font-weight: 700; */
+        cursor: pointer;
+    }
+    .nav button{
+        padding:10px 20px;
+        background-color: #C9002B;
+        color: white;
+        font-weight:bold;
+        border: none;;
+    }
+
+    /* ###########################################
+    HERO SECTION
+    ##############################################*/
+
+    .hero{
+        width: 100%;
+        height: 80vh;
+        margin: auto;
+
+
+        background-image: url(https://cdn.wallpapersafari.com/38/81/XWz2HO.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hero-text{
+        width:50%;
+        text-align: center;
+    }
+    .hero-text h2{
+        font-size: 60px;
+        color: red;
+        margin: 10px 0px;
+    }
+    .hero-text p{
+        color:gainsboro;
+    }
+    .hero button{
+        background-color: #C9002B;
+        color: #f1f1f1;
+        border: none;
+        padding:15px 100px; 
+        border-radius: 8px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    
+    /* ###########################################
+    SECTIONS GENERAL
+    ##############################################*/
+    section{
+        width: 100%;
+        background-color: gainsboro;
+        padding: 40px;
+        margin: auto;
+    }
+    section h2{
+        color: #C9002B;
+        text-align: center;
+    }
+    
+    /* ###########################################
+    ABOUT SECTION
+    ##############################################*/
+    .content{
+       display: flex;
+       margin-top: 20px;
+    }
+    .content img{
+       width: 50%;
+    }
+    .text_section{
+        margin-left: 20px;
+    }
+    .text_section h3{
+        margin-bottom: 10px;
+    }  
+    .text_section p{
+        color: #1f1f1f;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .text_section button, section button{
+        background-color: #C9002B;
+        color: #f1f1f1;
+        border: none;
+        padding:8px 10px; 
+        border-radius: 3px;
+        display: block;
+        margin: 20px auto;
+    }
+    .text_section button:hover{
+        background-color: #cf1e44;
+    }
+
+    /* ###########################################
+    SERVICES SECTION
+    ##############################################*/
+
+    .card_container{
+        margin: 10px 0px;
+        display: flex;
+        justify-content: center;
+        gap:10px
+    }
+    .card{
+        width: 33%;
+        box-shadow:2px 2px 10px gray;
+        padding: 10px;
+    }
+    .card img{
+        width: 100%;
+    }
+    .card h3{
+        margin:8px 0px;
+    }
+    .card p{
+        line-height:15px;
+        color: rgb(54, 52, 52);
+        font-size: 16px;
+    }
+
+
+    /* ###########################################
+    PRODUCTS SECTION
+    ##############################################*/
+    .products{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        /* background-color: #1f1f1f; */
+        flex-wrap: wrap;
+    }
+    .products .card{
+        /* border: 1px solid; */
+        width: 24%;
+        padding:20px;
+        background-color: white;
+        border-radius:4px;
+    }
+
+    
+    /* ###########################################
+   CONTACT US SECTION
+    ##############################################*/
+    .contact-container{
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        box-shadow: 1px 1px 7px gray;
+        justify-content: space-between;
+    }
+    .personal_details{
+        width: 48%;
+    }
+    .personal_details h3, .form h3{
+        color: #1f1f1f;
+        margin: 10px 0px;
+    }
+    .form{
+        width: 45%;
+    }
+    .form label{
+        display: block;
+    }
+    .form form input{
+        width: 80%;
+        height:33px;
+        border-radius: 2px;
+        border:1px solid gainsboro;
+        font-family: outfit;
+        padding:10px
+    }
+    .form form input:focus,    .form form textarea:focus{
+        outline:1px solid rgb(0, 102, 255);
+        border:none;
+        box-shadow:0.5px 0.5px 10px gainsboro;
+    }
+    .form form textarea{
+        width: 80%;
+        border:1px solid gainsboro;
+        padding:10px
+    }
+
+    
+    /* ###########################################
+    FOOTER SECTION
+    ##############################################*/
+    footer{
+        background-color: #1f1f1f;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        padding:30px;
+    }
+    .company_details{
+        width:50%;
+        padding-right:30px ;
+    }
+    .products_list ul, .services_lists ul{
+        list-style: none;
+    }
+    .products_list{
+        width: 20%;
+    }
+    .services_lists{
+        width:30%;
+    }
+    .products_list ul li, .services_lists ul li{
+        width: 80%;
+        padding:3px 2px;
+        cursor: pointer;
+    }
+    .products_list ul li:hover, .services_lists ul li:hover{
+        background-color: #f11141;
+    }
+</style>
+<body>
+    <div class="nav">
+        <h2 class="logo">Alex and <span>Friends</span></h2>
+
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Products</li>
+            <li>Contact Us</li>
+        </ul>
+        <button>Get Started</button>
+    </div>
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Our Best Deals</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eum obcaecati iusto quo unde rem. Est dicta ratione autem quisquam ipsam qui dolorum. Autem, dolore reiciendis! Incidunt nesciunt temporibus numquam.</p>
+            <button>Get Started</button>
+        </div> 
+    </div>
+
+    <section class="about_us">
+        <h2>About Us</h2>
+        <div class="content">
+            <img src="https://s.yimg.com/ny/api/res/1.2/.6VbTcSLQGFzwaMS1ais_w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/gobankingrates_644/b4540407f3c39206335e3e4820b2a1a7" alt="">
+
+            <div class="text_section">
+                <h3>A Purpose Driven History</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, ullam earum incidunt at reiciendis illo quidem! Et laborum nisi expedita molestiae. Fugiat asperiores quia tempora, exercitationem vel nostrum labore illo?</p>
+
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi dolorum deleniti veritatis et similique ipsum, facilis minima quas molestias quasi atque quod non corporis fugiat enim tempore a, nisi cum!</p>
+
+                <button>Learn More About Us</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+
+        <div class="card_container">
+            <div class="card">
+                <img src="images/Global Warming.png" alt="">
+                <h3>Global Warming</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio quibusdam distinctio nam itaque obcaecati cupiditate numquam alias accusantium repellat hic sit voluptatum, ex reprehenderit atque impedit cumque iusto maiores!</p>
+                <button>Join Us Today</button>
+            </div>
+
+            <div class="card">
+                <img src="images/Polution.png" alt="">
+                <h3>Pollution</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio quibusdam distinctio nam itaque obcaecati cupiditate numquam alias accusantium repellat hic sit voluptatum, ex reprehenderit atque impedit cumque iusto maiores!</p>
+                <button>Join Us Today</button>
+            </div>
+
+            <div class="card">
+                <img src="images/Unemployment.png" alt="">
+                <h3>Unemployment</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed odio quibusdam distinctio nam itaque obcaecati cupiditate numquam alias accusantium repellat hic sit voluptatum, ex reprehenderit atque impedit cumque iusto maiores!</p>
+                <button>Join Us Today</button>
+            </div>    
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="card">
+                <img src="images/Cocacola.png" alt="">
+                <h2>Cocacola</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+           </div>
+        
+           <div class="card">
+                <img src="images/Fanta.png" alt="">
+                <h2>Fanta</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+           </div>
+        
+           <div class="card">
+                <img src="images/Sprite.png" alt="">
+                <h2>Sprite</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+           </div>
+        
+           <div class="card">
+                <img src="images/Fanta -can.png" alt="">
+                <h2>Fanta Can</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+            </div>
+        
+            <div class="card">
+                <img src="images/Cocacola -can.png" alt="">
+                <h2>Cocacola Can</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="images/stoney-can.png" alt="">
+                <h2>Stoney Can</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="images/Cocacola.png" alt="">
+                <h2>Cocacola</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+           </div>
+        
+           <div class="card">
+                <img src="images/Fanta.png" alt="">
+                <h2>Fanta</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur accusamus odit, rem dolores in quidem assumenda fugit quos ab accusantium unde doloremque. Voluptates deserunt dolore culpa ducimus, nihil obcaecati sequi?</p>
+                <button>Add to Cart</button>
+           </div>
+        </div>
+    </section>
+
+    <section class="contact_form">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="personal_details">
+                <h3>Personal Details</h3>
+                <p><b>Name:</b> Tracy and Friends Ltd</p>
+                <p><b>Address:</b> Kenya Defence Forces, Airforce, Nairobi Kenya</p>
+                <p><b>Email:</b> tracyandfriends@gmail.com</p>
+                <p><b>Phone Number:</b> +254745 789 365</p>
+            </div>
+
+            <div class="form">
+                <h3>Contact Us Today</h3>
+                <form action="">
+                    <label for="">Full name:</label>
+                    <input type="text">
+
+                    <label for="">Email:</label>
+                    <input type="email" name="" id="">
+
+                    <label for="">Message:</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                    <button>Submit Details</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="company_details">
+            <h1>Tracy and Friends Company</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum est eligendi, asperiores accusantium maiores nulla obcaecati possimus recusandae neque repudiandae aspernatur maxime. Praesentium quae laudantium quam repellat facere et dolorem.</p>
+        </div>
+
+        <div class="products_list">
+            <h2>Products</h2>
+            <ul>
+                <li>Cocacola</li>
+                <li>Fanta</li>
+                <li>Sprite</li>
+                <li>Stoney</li>
+            </ul>
+        </div>
+
+        <div class="services_lists">
+            <h2>Services</h2>
+            <ul>
+                <li>Environmental Education</li>
+                <li>Climate Change Mitigation</li>
+                <li>Zero Carbon Emission</li>
+                <li>Water, Land and Air Poluttion Avoidance</li>
+            </ul>   
+        </div>
+    </footer>
+   
+</body>
+</html>
+
